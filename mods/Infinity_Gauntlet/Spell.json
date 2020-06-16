@@ -1,0 +1,23 @@
+
+{
+    "id": "translocator_gate_spawn",
+    "type": "SPELL",
+    "name": "生成易位门",
+    "description": "利用空间宝石的力量在生成一团能量光团，为你自动生成传送门。",
+    "valid_targets": [ "hostile", "ally", "ground", "self" ],
+    "flags": [ "VERBAL", "NO_LEGS" ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 1,
+    "min_range": 0,
+    "max_range": 0,
+	"min_duration": 5000,
+	"max_duration": 5000,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "effect": "spawn_item",
+    "effect_str": "translocator_gate_spawn_item"
+}

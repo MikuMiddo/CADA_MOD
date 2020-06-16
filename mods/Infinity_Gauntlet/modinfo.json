@@ -1,0 +1,10 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "Infinity_Gauntlet",
+    "name": "无限手套",
+    "authors": [ "Middo" ],
+    "description": "添加了力量宝石与拳套",
+    "dependencies": [ "dda","aftershock","magiclysm" ]
+  }
+]

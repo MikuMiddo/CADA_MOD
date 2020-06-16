@@ -1,0 +1,113 @@
+[
+{
+    "copy-from": "tourmaline",
+    "type": "TOOL_ARMOR",
+    "id": "stone_of_power",
+	"looks_like":"tourmaline",
+    "name": { "str": "力量宝石", "str_pl": "力量宝石" },
+    "description": "使用这颗宝石，使用者甚至可以复制一切的物理性超能力，并且使得自身的物理攻击能力与防御能力达到无可战胜的程度。使用宝石的人还能够操纵宇宙中几乎最强的能量，即使是最轻微的释放也能放出将大量敌人全部击倒的能量冲击波，大功率甚至可以引发将星球毁灭的能量爆炸。\\n当然，这颗只是你召唤来的投影，并没有这么强大的力量。",
+	"coverage": 0,
+    "warmth": 0,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONLY_ONE", "SKINTIGHT" ],
+    "relic_data": { "passive_effects": [ 
+										{ "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 10 } ] },
+										{ "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 50 } ] },
+										{ "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 200 },{ "value": "SPEED", "multiply": 0.1 } ] }
+										] }
+},
+{
+    "copy-from": "peridot",
+    "type": "TOOL_ARMOR",
+    "id": "stone_of_time",
+	"looks_like":"peridot",
+    "name": { "str": "时间宝石", "str_pl": "时间宝石" },
+    "description": "这颗宝石能让使用者到达任何一个时间点，无论是久远的过去，还是遥远的未来，使用这力量可以观看或是体验任何时代。如果使用者具备丰富的知识，则可以做更多的事情，甚至是操纵时间和因果。这使得可以把宝石作为一种武器使用，将敌人与整个世界坠入无限的时间循环当中。\\n当然，这颗只是你召唤来的投影，并没有这么强大的力量。",
+	"coverage": 0,
+    "warmth": 0,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONLY_ONE", "SKINTIGHT" ],
+    "relic_data": { "passive_effects": [ 
+										{ "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "SPEED", "add": 50 } ] },
+										{ "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "SPEED", "add": 100 } ] },
+										{ "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "SPEED", "add": 200 } ] }
+										] }
+},
+{
+    "copy-from": "aquamarine",
+    "type": "TOOL_ARMOR",
+    "id": "stone_of_space_teleport",
+	"looks_like":"aquamarine",
+    "name": { "str": "空间宝石（传送）", "str_pl": "空间宝石（传送）" },
+    "description": "利用这颗宝石，人们可以在瞬间内，将自己或是所有物体随意移动到任何空间。也可以按照自己的意志将空间任意扭曲或是重新排序甚至是创造新的空间，因此，空间传送、空间静止等能力在空间之石面前像呼吸一样简单。同时，它本身也蕴藏着无穷无尽的能量。\n当然，这颗只是你召唤来的投影，并没有这么强大的力量。",
+	"coverage": 0,
+    "warmth": 0,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONLY_ONE", "SKINTIGHT" ],
+    "relic_data": { "passive_effects": [ 
+										{ "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "MOVE_COST", "multiply": 0.5 },{ "value": "BONUS_DODGE", "add": 3 } ] },
+										{ "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "MOVE_COST", "multiply": 0.2 },{ "value": "BONUS_DODGE", "add": 5 } ] },
+										{ "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "MOVE_COST", "multiply": 0.1 },{ "value": "BONUS_DODGE", "add": 10 } ] }
+										] },
+	"use_action": [
+					{  "menu_text": "切换相位门建造","type": "transform", "target": "stone_of_space_teleport_door", "msg": "宝石的光芒内敛，以便于传送门的建造。","move":100},
+					{  "menu_text": "短距传送","type": "cast_spell", "spell_id": "translocate_self", "no_fail": true, "level": 25 }
+				  ]
+},
+{
+	"copy-from": "stone_of_space_teleport",
+    "looks_like":"aquamarine",
+    "type": "TOOL_ARMOR",
+	"id": "stone_of_space_teleport_door",
+    "name": { "str": "空间宝石（相位门）", "str_pl": "空间宝石（相位门）" },
+	"use_action": [
+                    {  "menu_text": "切换传送","type": "transform", "target": "stone_of_space_teleport_door", "msg": "宝石的光芒外放，你感受到了其中的空间之力。","move":100},
+					{  "type": "cast_spell", "spell_id": "translocator_gate_spawn", "no_fail": true, "level": 1 }
+				  ]
+},
+{
+    "copy-from": "tourmaline",
+    "type": "TOOL_ARMOR",
+    "id": "stone_of_soul",
+	"looks_like":"tourmaline",
+    "name": { "str": "灵魂宝石", "str_pl": "灵魂宝石" },
+    "description": "使用这颗宝石，使用者甚至可以复制一切的物理性超能力，并且使得自身的物理攻击能力与防御能力达到无可战胜的程度。使用宝石的人还能够操纵宇宙中几乎最强的能量，即使是最轻微的释放也能放出将大量敌人全部击倒的能量冲击波，大功率甚至可以引发将星球毁灭的能量爆炸。\n当然，这颗只是你召唤来的投影，并没有这么强大的力量。",
+	"coverage": 0,
+    "warmth": 0,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONLY_ONE", "SKINTIGHT" ],
+    "relic_data": { "passive_effects": [ 
+										{ "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 10 } ] },
+										{ "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 50 } ] },
+										{ "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 200 },{ "value": "SPEED", "add": -500 } ] }
+										] }
+},
+{
+    "copy-from": "tourmaline",
+    "type": "TOOL_ARMOR",
+    "id": "stone_of_reality",
+	"looks_like":"tourmaline",
+    "name": { "str": "现实宝石", "str_pl": "现实宝石" },
+    "description": "使用这颗宝石，使用者甚至可以复制一切的物理性超能力，并且使得自身的物理攻击能力与防御能力达到无可战胜的程度。使用宝石的人还能够操纵宇宙中几乎最强的能量，即使是最轻微的释放也能放出将大量敌人全部击倒的能量冲击波，大功率甚至可以引发将星球毁灭的能量爆炸。\n当然，这颗只是你召唤来的投影，并没有这么强大的力量。",
+	"coverage": 0,
+    "warmth": 0,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONLY_ONE", "SKINTIGHT" ],
+    "relic_data": { "passive_effects": [ 
+										{ "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 10 } ] },
+										{ "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 50 } ] },
+										{ "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 200 },{ "value": "SPEED", "add": -500 } ] }
+										] }
+},
+{
+    "copy-from": "tourmaline",
+    "type": "TOOL_ARMOR",
+    "id": "stone_of_mind",
+	"looks_like":"tourmaline",
+    "name": { "str": "心灵宝石", "str_pl": "心灵宝石" },
+    "description": "使用这颗宝石，使用者甚至可以复制一切的物理性超能力，并且使得自身的物理攻击能力与防御能力达到无可战胜的程度。使用宝石的人还能够操纵宇宙中几乎最强的能量，即使是最轻微的释放也能放出将大量敌人全部击倒的能量冲击波，大功率甚至可以引发将星球毁灭的能量爆炸。/n当然，这颗只是你召唤来的投影，并没有这么强大的力量。",
+	"coverage": 0,
+    "warmth": 0,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONLY_ONE", "SKINTIGHT" ],
+    "relic_data": { "passive_effects": [ 
+										{ "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 10 } ] },
+										{ "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 50 } ] },
+										{ "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 200 },{ "value": "SPEED", "add": -500 } ] }
+										] }
+}
+]

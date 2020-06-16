@@ -1,0 +1,36 @@
+[
+{
+    "id": "translocator_gate_power_blob",
+    "type": "MONSTER",
+    "name": { "str": "能量团" },
+    "description": "一团不断鼓动的能量团，正在逐渐形成传送门的形状",
+    "default_faction": "factionless",
+    "species": [ "UNKNOWN" ],
+    "volume": "5000 ml",
+    "weight": "500 g",
+    "hp": 5,
+    "speed": 100,
+    "symbol": "o",
+    "color": "blue",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_cut": 0,
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
+    "death_function": [ "DISAPPEAR" ],
+    "flags": [ "IMMOBILE" ],
+	"death_drops":"translocator_gate_item_group"
+},{
+	"id":"translocator_gate_spawn_item",
+	"copy-from": "aquamarine",
+	"name": { "str": "能量团" },
+	"type":"TOOL",
+    "description": "一团不断鼓动的能量团，正在逐渐形成传送门的形状。丢到地上以生成一扇传送门。",
+	"drop_action":{"type":"deploy_furn","furn_type":"f_magiclysm_translocator_gate"}
+},{
+	"id":"translocator_gate_item_group",
+	"type":"item_group",
+	"subtype":"distribution",
+	"entries":[{"item":"translocator_gate_spawn_item","prob":100,"count":1}]
+}
+]
