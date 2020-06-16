@@ -1,0 +1,10 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "After_Shock_Personal_UsageMod",
+    "name": "余震个人用强化模组",
+    "authors": [ "SomeDeadGuy" ],
+    "description": "添加了一些余震的武器增强",
+    "dependencies": [ "dda","aftershock" ]
+  }
+]
