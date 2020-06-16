@@ -1,0 +1,20 @@
+{
+    "id": "afs_hardlight_longbow_mk2",
+	"type": "GUN",
+	"copy-from": "afs_hardlight_longbow",
+    "looks_like": "afs_hardlight_longbow",
+	"name":"硬光长弓 MK.II",
+    "price": 2000000,
+    "price_postapoc": 40000,
+    "min_strength": 6,
+    "weight": "226 g",
+    "volume": "3000 ml",
+    "bashing": 16,
+    "ranged_damage": { "damage_type": "heat", "amount": 60, "armor_penetration": 30 },
+    "range": 60,
+    "dispersion": 40,
+    "durability": 10,
+    "reload": 50,
+    "ups_charges": 30,
+    "valid_mod_locations": [ [ "underbarrel", 2 ], [ "sights", 2 ], [ "accessories", 4 ], [ "stabilizer", 1 ] ]
+  }
