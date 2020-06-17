@@ -1,0 +1,11 @@
+
+  {
+    "type": "MOD_INFO",
+    "ident": "thousandmask",
+    "name": "千衍面",
+    "authors": [ "yida123" ],
+    "//":"yida2020.5",
+    "description": "动不动就变脸，不会吧不会吧。",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  }
