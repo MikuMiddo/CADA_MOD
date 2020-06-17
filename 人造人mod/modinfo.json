@@ -1,0 +1,11 @@
+[
+    {
+      "type": "MOD_INFO",
+      "ident": "peopleseed",
+      "name": "人种",
+      "authors": [ "yida" ],
+      "description": "大规模造人mod",
+      "category": "content",
+      "dependencies": [ "dda" ]
+    }
+  ]
