@@ -1,0 +1,111 @@
+[
+{
+    "id": "DLAM_esp",
+    "name": "ESP训练盒",
+    "type": "TOOL",
+    "description": "最快的方式学会念力的未来念力训练方式，你只要躺在就可以成功获得超能力，还在犹豫什么，立即订购吧！",
+    "weight": "500 g",
+    "volume": "250 ml",
+    "price": 10000,
+    "symbol": "/",
+    "material": ["copper"],
+    "bashing": 5,
+    "to_hit": 1,
+    "color": "brown",
+  "use_action": {
+    "transform_age": 30000000,
+    "target": "DLAM_esp_1",
+    "moves": 0,
+    "msg": "你的训练成果好了。",
+    "not_ready_msg": "还没有到时间",
+    "type": "delayed_transform"
+  },
+    "\\": "生成完毕"
+},
+{
+    "id": "DLAM_esp_1",
+    "name": "ESP训练盒",
+    "type": "TOOL",
+    "description": "最快的方式学会念力的未来念力训练方式，你只要躺在就可以成功获得超能力，还在犹豫什么，立即订购吧！(你的训练成果好了",
+    "weight": "500 g",
+    "volume": "250 ml",
+    "price": 10000,
+    "symbol": "/",
+    "material": ["copper"],
+    "bashing": 5,
+    "to_hit": 1,
+    "color": "brown",
+    "\\": "生成完毕"
+},
+
+
+{
+    "result": "DLAM_esp_1",
+    "type": "uncraft",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": 100,
+    "components": [
+      [ [ "esp_1", 1 ] ]
+    
+    ]
+  },
+    {
+        "type" : "mutation",
+        "id" : "THRESH_ESP",
+        "name" : "念力",
+        "points" : 0,
+        "description" : "debug专用",
+        "valid": false,
+        "purifiable": false,
+        "threshold": true
+        },
+   
+  {
+    "id": "ESP",
+    "type": "mutation_category",
+    "category": "ESP",
+    "threshold_mut": "THRESH_ESP",
+    "name": "ESP念力",
+    "iv_fatigue": 0,
+    "iv_hunger": 0,
+    "iv_message": "You feel an otherworldly presence reaching out to you.",
+    "iv_pain": 0,
+    "iv_thirst": 0,
+    "mutagen_message": "If you can read this, this is probably a bug.",
+    "iv_additional_mutations": 2,
+    "iv_additional_mutations_chance": 5,
+    "iv_min_mutations": 1,
+    "memorial_message": "Pierced the veil between worlds."
+  },
+      {
+        "type":"mutation",
+        "id":"DLAM_ESP_ONE",
+        "name":"念力",
+        "points":250,
+        "visibility":1,
+        "ugliness":1,
+        "description":"你虽然没有瞬间移动等超能力，但是你的感知变得十分敏锐，而且也过了期限，你没办法退货了！",
+        "passive_mods":{"per_mod":10},
+        "active" : true,
+        "player_display" : false,
+    "category" : ["ESP"],
+        "\\": "生成完毕"
+    },
+    {
+        "id" : "esp_1",
+        "type" : "COMESTIBLE",
+        "comestible_type" : "MED",      
+        "name" : "训练成果",
+        "name_plural": "训练成果",      
+        "description" : "这是你270天来躺下的成果。",
+        "symbol" : "!",
+        "color" : "green",
+        "healthy" : 15,
+        "use_action": {
+            "mutation_category": "ESP",
+            "type": "mutagen"
+          }
+   
+    }
+  ]

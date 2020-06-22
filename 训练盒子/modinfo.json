@@ -1,0 +1,11 @@
+
+  {
+    "type": "MOD_INFO",
+    "ident": "magicbox",
+    "name": "训练魔玩盒子",
+    "authors": [ "yida123" ],
+    "//":"",
+    "description": "在乐趣中获取知识，在成长中收获敏感，在屠杀中猎取力量，在",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  }

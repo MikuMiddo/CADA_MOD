@@ -1,0 +1,140 @@
+[
+    {
+        "id": "DLAM_tsr",
+        "name": "TSR训练盒",
+        "type": "TOOL",
+        "description": "以杀道的方式增强自身血气，有违人伦，此为邪道",
+        "weight": "500 g",
+        "volume": "250 ml",
+        "price": 10000,
+        "symbol": "/",
+        "material": ["copper"],
+        "bashing": 5,
+        "to_hit": 1,
+        "color": "brown",
+      "use_action": {
+        "transform_age": 50,
+        "target": "DLAM_tsr_1",
+        "moves": 0,
+        "msg": "你的成果好了。",
+        "not_ready_msg": "还没有到时间。",
+        "type": "delayed_transform"
+      },
+        "\\": "生成完毕"
+    },
+    {
+        "id": "DLAM_tsr_1",
+        "name": "tsr增体丹",
+        "type": "TOOL",
+        "description": "以杀道的方式增强自身血气，有违人伦，此为邪道",
+        "weight": "500 g",
+        "volume": "250 ml",
+        "price": 10000,
+        "symbol": "/",
+        "material": ["copper"],
+        "bashing": 5,
+        "to_hit": 1,
+        "color": "brown",
+        "\\": "生成完毕"
+    },
+    
+    
+    {
+        "result": "DLAM_tsr_1",
+        "type": "uncraft",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": 100,
+        "components": [
+          [ [ "str_1", 1 ] ]
+        
+        ]
+      },
+        {
+            "type" : "mutation",
+            "id" : "THRESH_STR",
+            "name" : "增体",
+            "points" : 0,
+            "description" : "debug专用",
+            "valid": false,
+            "purifiable": false,
+            "threshold": true
+            },
+       
+      {
+        "id": "STR",
+        "type": "mutation_category",
+        "category": "STR",
+        "threshold_mut": "THRESH_STR",
+        "name": "STR增体",
+        "iv_fatigue": 0,
+        "iv_hunger": 0,
+        "iv_message": "You feel an otherworldly presence reaching out to you.",
+        "iv_pain": 0,
+        "iv_thirst": 0,
+        "mutagen_message": "If you can read this, this is probably a bug.",
+        "iv_additional_mutations": 2,
+        "iv_additional_mutations_chance": 5,
+        "iv_min_mutations": 1,
+        "memorial_message": "Pierced the veil between worlds."
+      },
+      {
+        "type":"mutation",
+        "id":"DLAM_STR_ONE",
+        "name":"增体",
+        "points":1,
+        "visibility":1,
+        "ugliness":1,
+        "description":"你的体魄变得超乎常人。",
+        "player_display" : false,
+        "passive_mods":{"str_mod":10},
+        "category" : ["STR"],
+        "\\": "生成完毕"
+    },
+        {
+            "id" : "str_1",
+            "type" : "COMESTIBLE",
+            "comestible_type" : "MED",      
+            "name" : "训练成果",
+            "name_plural": "训练成果",      
+            "description" : "以杀证道的成果。",
+            "symbol" : "!",
+            "color" : "green",
+            "healthy" : 15,
+            "use_action": {
+                "mutation_category": "STR",
+                "type": "mutagen"
+              }
+       
+        },{
+            "result":"DLAM_tsr",
+            "type": "recipe",
+            "category": "CC_OTHER",
+            "subcategory": "CSC_OTHER_OTHER",
+            "skills_required": ["fabrication",1],
+            "skill_used": "FK_guigunawushu",
+            "time": "5 m",
+            "reversible": false,
+            "book_learn": [["FK_guigunawu",1]],
+            "using": [],
+            "qualities": [],
+            "components": [[["paper",10]],[["FK_own",10000]]],
+            "\\": "生成完毕"
+        },
+        {
+          "result": "DLAM_esp",
+          "type": "recipe",
+          "category": "CC_OTHER",
+          "subcategory": "CSC_OTHER_OTHER",
+          "skills_required": ["speech",2],
+          "skill_used": "barter",
+          "time": "60 s",
+          "reversible": false,
+          "autolearn": true,
+          "using": [],
+          "qualities": [],
+          "components": [[["mutagen_alpha",1],["mutagen",10]]],
+          "\\": "生成完毕"
+      }
+      
+      ]

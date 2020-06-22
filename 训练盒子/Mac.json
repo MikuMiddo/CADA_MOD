@@ -1,0 +1,167 @@
+
+[
+    {
+        "id": "MAC_BOX",
+        "type": "TOOL",
+        "name": "Mac训练盒",
+        "description": "开始接受挑战吧",
+        "//": "刷新出来的箱子.",
+        "weight": "5 kg",
+        "volume": "2500 ml",
+        "price": 500000,
+        "price_postapoc": 100000,
+        "to_hit": -20,
+        "bashing": 15,
+        "material": "steel",
+        "symbol": "%",
+        "color": "yellow",
+        "use_action": {
+          "type": "place_monster",
+          "monster_id": "mon_mac_boxer",
+          "place_randomly": true,
+          "friendly_msg": "挑战开始",
+          "hostile_msg": "命运抉择",
+          "difficulty": 0,
+          "moves": 150
+        }
+    },
+        {
+        "type": "MONSTER",
+        "id": "mon_mac_boxer",
+        "name": "盒子神",
+        "description": ".",
+        "categories": ["CLASSIC"],
+        "species": ["HALLUCINATION"],
+        "volume": "80 L",
+        "weight": "65 kg",
+        "symbol": "*",
+        "color": "red",
+        "size": "SMALL",
+        "material": ["copper"],
+        "speed": 100,
+        "hp": 1,
+        "default_faction": "factionless",
+        "death_function": ["DISAPPEAR"],
+        "death_drops": "MAC_DEATH",
+        "special_attack": [["DISAPPEAR",1]],
+        "flags": ["GRABS","HEARS","SMELLS","SEES"],
+        "\\": "生成完毕"
+    } ,{
+      "id": "c4armed",
+      "type": "TOOL",
+      "category": "weapons",
+      "name": {
+          "str": "C4炸弹（无保险）",
+          "str_pl": "C-4 explosives (armed)"
+      },
+      "description": "这是军用级别的黑索金（环三亚甲基三硝胺）合成炸药。标签上标着：\"严重警告，高爆炸性！\"。它由一个小定时器来引爆，现在定时器正在嘀嘀作响。",
+      "weight": 1570,
+      "volume": 1,
+      "price": 0,
+      "to_hit": -4,
+      "material": [
+          "plastic",
+          "null"
+      ],
+      "symbol": ";",
+      "color": "light_gray",
+      "initial_charges": 9,
+      "max_charges": 9,
+      "turns_per_charge": 1,
+      "use_action": {
+          "type": "explosion",
+          "sound_volume": 0,
+          "sound_msg": "Tick.",
+          "no_deactivate_msg": "You've already set the %s's timer, you might want to get away from it.",
+          "explosion": {
+              "power": 2000
+          }
+      },
+      "flags": {
+          "TRADER_AVOID": 0
+      },
+      "repo_id": 11315,
+      "original_id": "c4armed",
+      "reload": 100,
+      "qualities": []
+  }
+,
+    {
+      "type": "item_group",
+      "subtype": "collection",
+      "\/\/": "contains cloth (always), a cash card (10% chance), and a random item (50% chance)",
+      "id": "MAC_DEATH",
+      "entries": [
+          {
+              "item": "MAC_BOX"
+          },
+          {
+              "item": "MAC_1",
+              "prob": 1
+          },
+          {
+              "item": "c4armed",
+              "prob": 10000
+            
+          }
+      ]
+    },
+
+
+    {
+    "type" : "mutation",
+    "id" : "THRESH_MAC",
+    "name" : "念力",
+    "points" : 0,
+    "description" : "debug专用",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+    },
+
+{
+"id": "MAC",
+"type": "mutation_category",
+"category": "MAC",
+"threshold_mut": "THRESH_MAC",
+"name": "MAC智力",
+"iv_fatigue": 0,
+"iv_hunger": 0,
+"iv_message": "You feel an otherworldly presence reaching out to you.",
+"iv_pain": 0,
+"iv_thirst": 0,
+"mutagen_message": "If you can read this, this is probably a bug.",
+"iv_additional_mutations": 2,
+"iv_additional_mutations_chance": 5,
+"iv_min_mutations": 1,
+"memorial_message": "Pierced the veil between worlds."
+},
+  {
+    "type":"mutation",
+    "id":"DLAM_MAC_ONE",
+    "name":"智力",
+    "points":250,
+    "visibility":1,
+    "ugliness":1,
+    "description":"再完美的智力也敌不过命运。",
+    "passive_mods":{"int_mod":10},
+    "active" : true,
+    "player_display" : false,
+"category" : ["MAC"],
+    "\\": "生成完毕"
+},{
+    "id" : "MAC_1",
+    "type" : "COMESTIBLE",
+    "comestible_type" : "MED",      
+    "name" : "馈赠",
+    "name_plural": "馈赠",      
+    "description" : "这是神的祝福。",
+    "symbol" : "!",
+    "color" : "green",
+    "healthy" : 15,
+    "use_action": {
+        "mutation_category": "MAC",
+        "type": "mutagen"
+      }
+    }
+]
